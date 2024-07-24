@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Awesomed/static/css/main.0117312d.css",
+    "main.js": "/Awesomed/static/js/main.8fca23ba.js",
+    "index.html": "/Awesomed/index.html",
+    "main.0117312d.css.map": "/Awesomed/static/css/main.0117312d.css.map",
+    "main.8fca23ba.js.map": "/Awesomed/static/js/main.8fca23ba.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0117312d.css",
+    "static/js/main.8fca23ba.js"
+  ]
+}
