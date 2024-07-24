@@ -1,0 +1,104 @@
+#header {
+  border-bottom: 1px double rgb(247, 247, 247);
+}
+/* 헤더 스타일 */
+.Top {
+  background-color: #ffffff;
+  width: 1080px;
+  height: 90px;
+  margin: 0 auto;
+
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000; /* z-index 조정: 메뉴 계층 구조 명확히 함 */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Top menu styles */
+.Top_menu {
+  display: flex;
+  gap: 12px;
+}
+
+.Top_menu ul {
+  position: relative;
+}
+.Top_menu h3 {
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+
+/* Top right menu styles */
+.Top_right {
+  display: flex;
+}
+
+.Top_right li {
+  position: relative; /* 추가: right_menu_box의 위치 기준점 설정 */
+}
+.Top_right > li > a{
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+
+/* Hover image styles */
+.hohover-container {
+  position: relative;
+  display: inline-block;
+}
+
+.hohover {
+  transition: opacity 0s ease;
+}
+
+/* Menu box styles */
+.Top_menu .menu_box,
+.right_menu_box {
+  position: absolute;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1001; /* z-index 증가: Top보다 위에, Top_right보다는 아래에 위치하도록 함 */
+  border: 1px solid rgb(235, 235, 235);
+  display: none;
+  color: #b2b2b2;
+}
+
+.Top_menu .menu_box {
+  width: 100%;
+}
+
+.right_menu_box{
+  width: 100%;
+}
+
+/* 호버 효과 통합: 코드 중복 제거 및 일관성 있는 동작 보장 */
+.Top_menu ul:hover .menu_box,
+.hohover-container:hover + .right_menu_box,
+.right_menu_box:hover {
+  display: block;
+}
+
+/* 공통 스타일 */
+img {
+  width: 40px;
+}
+.menu_box a,
+.right_menu_box a {
+  color: #b2b2b2;
+}
+.menu_box a:hover,
+.right_menu_box a:hover {
+  color: black;
+}
+.Top_menu .menu_box li,
+.right_menu_box li {
+  padding: 8px 0;
+  font-size: 12px;
+}
